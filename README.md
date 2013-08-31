@@ -24,7 +24,7 @@ consoler('hey dude, well done !');
 
 ## Run demos
 
-````javascript
+````
 $ git clone https://github.com/turingou/consoler.git
 $ cd consoler/demo
 $ node demo.js
