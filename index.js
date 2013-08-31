@@ -20,7 +20,7 @@ var capf = function(string) {
 
 exports.log = function(action, text) {
     var colorMap = require('./colors.json');
-    var pkgtag = sys.name.magenta + '@' + sys.version;
+    var pkgtag = capf(sys.name).magenta + '@' + sys.version;
     if (!text) var text = action,action = 'info';
     var c = colorMap[action] ? colorMap[action] : 'yellow';
     return console.log(pkgtag + color[c](' [ ' + capf(action) + ' ]') + ' ' + text);

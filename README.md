@@ -4,13 +4,13 @@ another smart and colorful console logger
 
 ![thumb](http://ww4.sinaimg.cn/large/61ff0de3gw1e85zznn1u7j20ln0ccwg0.jpg)
 
-## How to install
+### How to install
 
 ````
 $ npm install consoler
 ````
 
-## Sample code
+### Sample code
 
 ````javascript
 var consoler = require('consoler');
@@ -22,7 +22,7 @@ consoler.log('success','hey dude, well done !');
 consoler.log('hey dude, well done !');
 ````
 
-## Run demos
+### Run demos
 
 ````
 $ git clone https://github.com/turingou/consoler.git
@@ -30,7 +30,7 @@ $ cd consoler/demo
 $ node demo.js
 ````
 
-## Colors Map
+### Colors Map
 
 feel free to add your labels and colors in `./colors.json` or add your event and the color
 
@@ -39,7 +39,7 @@ var consoler = require('consoler');
 consoler.add('alldone','green');
 ````
 
-## Run unit-test (Mocha)
+### Run unit-test (Mocha)
 
 ````
 $ git clone https://github.com/turingou/consoler.git
