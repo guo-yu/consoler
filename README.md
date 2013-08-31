@@ -16,10 +16,10 @@ $ npm install consoler
 var consoler = require('consoler');
 
 // check out in your console
-consoler('success','hey dude, well done !');
+consoler.log('success','hey dude, well done !');
 
 // or 
-consoler('hey dude, well done !');
+consoler.log('hey dude, well done !');
 ````
 
 ## Run demos
@@ -32,7 +32,12 @@ $ node demo.js
 
 ## Colors Map
 
-feel free to add your labels and colors in `./colors.json`
+feel free to add your labels and colors in `./colors.json` or add your event and the color
+
+````javascript
+var consoler = require('consoler');
+consoler.add('alldone','green');
+````
 
 ## Run unit-test (Mocha)
 

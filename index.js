@@ -9,7 +9,7 @@
 
 var color = require('colors'),
     fs = require('fs'),
-    colorMap = require('./colors.json'),
+    pkg = require('./pkg'),
     sys = require('./package.json');
 
 try {sys = JSON.parse(fs.readFileSync('../../package.json'))} catch (e) {};
@@ -18,9 +18,21 @@ var capf = function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-module.exports = function(action, text) {
+exports.log = function(action, text) {
+    var colorMap = require('./colors.json');
     var pkgtag = sys.name.magenta + '@' + sys.version;
     if (!text) var text = action,action = 'info';
     var c = colorMap[action] ? colorMap[action] : 'yellow';
     return console.log(pkgtag + color[c](' [ ' + capf(action) + ' ]') + ' ' + text);
 };
+
+exports.add = function(action, color) {
+    var colors = pkg.fetch('/colors.json');
+    if (action && color) {
+        colors[action] = color;
+        pkg.set('/colors.json',colors);
+        return colors;
+    } else {
+        return false;
+    }
+}
