@@ -11,14 +11,19 @@ $ npm install consoler
 
 ## Sample code
 
-now building...
-
 ````javascript
 var consoler = require('consoler');
 
 // check out in your console
 consoler('success','hey dude, well done !');
+
+// or 
+consoler('hey dude, well done !');
 ````
+
+## Colors Map
+
+feel free to add your labels and colors in `./colors.json`
 
 ## Run unit-test (Mocha)
 
