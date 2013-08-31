@@ -8,17 +8,19 @@
 // @author: [turing](http://guoyu.me)
 
 var color = require('colors'),
-    sys = require('../../package.json') ? require('../../package.json') : require('./package.json'),
-    cr = sys.name.magenta + '@' + sys.version,
-    colorMap = require('./colors.json');
+    fs = require('fs'),
+    colorMap = require('./colors.json'),
+    sys = require('./package.json');
 
-console.log(sys);
+try {sys = JSON.parse(fs.readFileSync('../../package.json'))} catch (e) {};
 
 var capf = function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
 module.exports = function(action, text) {
-    if (!text) var text = action, action = 'info';
-    return console.log(cr + color[colorMap[action]](' [ ' + capf(action) + ' ] ') + ' ' + text);
+    var pkgtag = sys.name.magenta + '@' + sys.version;
+    if (!text) var text = action,action = 'info';
+    var c = colorMap[action] ? colorMap[action] : 'yellow';
+    return console.log(pkgtag + color[c](' [ ' + capf(action) + ' ]') + ' ' + text);
 };
