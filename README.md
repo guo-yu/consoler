@@ -2,7 +2,7 @@
 ---
 another smart and colorful console logger
 
-![screenshot](http://ww4.sinaimg.cn/large/61ff0de3gw1e85zznn1u7j20ln0ccwg0.jpg)
+![thumb](http://ww4.sinaimg.cn/large/61ff0de3gw1e85zznn1u7j20ln0ccwg0.jpg)
 
 ## How to install
 
