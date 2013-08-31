@@ -1,0 +1,8 @@
+{
+    "success": "green",
+    "loading": "yellow",
+    "error": "red",
+    "info": "yellow",
+    "404": "red",
+    "500": "red"
+}

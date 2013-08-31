@@ -1,0 +1,27 @@
+{
+  "name": "consoler",
+  "version": "0.0.0",
+  "description": "another smart console logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turingou/consoler.git"
+  },
+  "keywords": [
+    "console",
+    "consoler",
+    "color",
+    "logger"
+  ],
+  "author": "turing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/consoler/issues"
+  },
+  "dependencies": {
+    "colors": "*"
+  },
+}
