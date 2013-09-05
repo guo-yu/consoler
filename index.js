@@ -11,7 +11,7 @@ var color = require('colors'),
     fs = require('fs'),
     pkg = require('./pkg'),
     sys = require('./package.json'),
-    edge = 8;
+    edge = 7;
 
 try {sys = JSON.parse(fs.readFileSync('../../package.json'))} catch (e) {};
 
