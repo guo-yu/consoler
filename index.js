@@ -11,9 +11,10 @@ var color = require('colors'),
     fs = require('fs'),
     pkg = require('./pkg'),
     sys = require('./package.json'),
+    path = require('path'),
     edge = 7;
 
-try {sys = JSON.parse(fs.readFileSync('../../package.json'))} catch (e) {};
+try {sys = JSON.parse(fs.readFileSync(path.resolve(__dirname ,'../../package.json')))} catch (e) {};
 
 var capf = function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
