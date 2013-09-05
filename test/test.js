@@ -4,6 +4,7 @@ var consoler = require('../index'),
 describe('Console', function() {
     it('should return a correct string', function() {
         consoler.log('success','hello world');
+        consoler.success('success');
     });
     it('should return a correct string', function() {
         consoler.log('plain info');

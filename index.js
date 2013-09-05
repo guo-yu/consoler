@@ -10,7 +10,8 @@
 var color = require('colors'),
     fs = require('fs'),
     pkg = require('./pkg'),
-    sys = require('./package.json');
+    sys = require('./package.json'),
+    edge = 8;
 
 try {sys = JSON.parse(fs.readFileSync('../../package.json'))} catch (e) {};
 
@@ -18,12 +19,28 @@ var capf = function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+var pushBlanks = function(number) {
+    var blanks = [];
+    for (var i = 0; i < number; i++) {
+        blanks.push(' ');
+    };
+    return blanks.join('');
+}
+
+var filltext = function(edge, text) {
+    if (text && text.length < edge) {
+        return text + pushBlanks(edge - text.length);
+    } else {
+        return text;
+    }
+};
+
 exports.log = function(action, text) {
     var colorMap = require('./colors.json');
     var pkgtag = capf(sys.name).magenta + '@' + sys.version;
     if (!text) var text = action,action = 'info';
     var c = colorMap[action] ? colorMap[action] : 'yellow';
-    return console.log(pkgtag + color[c](' [ ' + capf(action) + ' ]') + ' ' + text);
+    return console.log(pkgtag + color[c](' [ ' + filltext(edge,capf(action)) + ' ]') + ' ' + text);
 };
 
 exports.add = function(action, color) {
@@ -35,4 +52,26 @@ exports.add = function(action, color) {
     } else {
         return false;
     }
+};
+
+exports.align = function(e) {
+    if (e && typeof(e) == 'number') {
+        edge = e;
+        return true;
+    } else {
+        return false;
+    }
 }
+
+// 常用log方法的快捷方式
+exports.success = function(text) {
+    return exports.log('success',text);
+};
+
+exports.error = function(text) {
+    return exports.log('error',text);
+};
+
+exports.loading = function(text) {
+    return exports.log('loading',text);
+};

@@ -18,8 +18,13 @@ var consoler = require('consoler');
 // check out in your console
 consoler.log('success','hey dude, well done !');
 
-// or 
+// or use default tag
 consoler.log('hey dude, well done !');
+
+// or use shortcuts
+consoler.success('success!');
+consoler.error('fail!');
+consoler.loading('wait a moment!');
 ````
 
 ### Run demos
@@ -28,6 +33,13 @@ consoler.log('hey dude, well done !');
 $ git clone https://github.com/turingou/consoler.git
 $ cd consoler/demo
 $ node demo.js
+````
+
+### Text align
+
+text align defalut length is 8, try to change edge length like this:
+````javascript
+consoler.align(20);
 ````
 
 ### Colors Map
