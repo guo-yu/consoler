@@ -38,10 +38,10 @@ var filltext = function(edge, text) {
 
 exports.log = function(action, text) {
     var colorMap = require('./colors.json');
-    var pkgtag = capf(sys.name).magenta + '@' + sys.version;
+    var pkgtag = capf(sys.name).cyan + ' ' + sys.version;
     if (!text) var text = action,action = 'info';
     var c = colorMap[action] ? colorMap[action] : 'yellow';
-    return console.log(pkgtag + color[c](' [ ' + filltext(edge,capf(action)) + ' ]') + ' ' + text);
+    return console.log(pkgtag + color[c](' ' + filltext(edge,capf(action)) + ' ') + ' ' + text);
 };
 
 exports.add = function(action, color) {
