@@ -1,4 +1,5 @@
-var path = require('path');
+var fs = require('fs'),
+    path = require('path');
 
 exports.capf = function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);

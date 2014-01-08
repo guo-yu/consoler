@@ -1,6 +1,6 @@
 {
   "name": "consoler",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "another smart and colorful console logger",
   "main": "index.js",
   "scripts": {
