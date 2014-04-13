@@ -7,4 +7,4 @@
 // @breif: another smart console logger
 // @author: [新浪微博@郭宇](http://guoyu.me)
 
-exports = module.exports = require('./libs/consoler');
+module.exports = require('./libs/consoler');
