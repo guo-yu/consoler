@@ -1,8 +1,11 @@
 {
   "name": "consoler",
-  "version": "0.0.9",
-  "description": "another smart and colorful console logger",
+  "version": "0.1.0",
+  "description": "a smart console logger and debugger for your litter scripts",
   "main": "index.js",
+  "bin": "./bin/cli",
+  "license": "MIT",
+  "author": "turing <o.u.turing@gmail.com>",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/test.js"
   },
@@ -15,15 +18,13 @@
     "consoler",
     "color",
     "logger"
-  ],
-  "author": "turing",
-  "license": "MIT",
+  ],  
   "bugs": {
     "url": "https://github.com/turingou/consoler/issues"
   },
   "dependencies": {
     "colors": "*",
-    "underscore": "*"
+    "comment-macros": "*"
   },
   "devDependencies": {
     "mocha": "*",

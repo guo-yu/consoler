@@ -4,7 +4,7 @@
 // / /__/ /_/ / / / (__  ) /_/ / /  __/ /    
 // \___/\____/_/ /_/____/\____/_/\___/_/     
 //
-// @breif: another smart console logger
+// @breif: a smart console logger and debugger for your litter scripts.
 // @author: [新浪微博@郭宇](http://guoyu.me)
 
 module.exports = require('./libs/consoler');
