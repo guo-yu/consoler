@@ -12,7 +12,7 @@ $ npm install consoler
 
 ### Sample code
 
-````javascript
+```javascript
 var consoler = require('consoler');
 
 // check out in your console
@@ -25,37 +25,37 @@ consoler.log('hey dude, well done !');
 consoler.success('success!');
 consoler.error('fail!');
 consoler.loading('wait a moment!');
-````
+```
 
 ### Run demos
 
-````
+```
 $ git clone https://github.com/turingou/consoler.git
 $ cd consoler/demo
 $ node demo.js
-````
+```
 
 ### Text align
 
 text align defalut length is 8, try to change edge length like this:
-````javascript
+```javascript
 consoler.align(20);
-````
+```
 
 ### Colors Map
 
 feel free to add your labels and colors in `./colors.json` or add your event and the color
 
-````javascript
+```javascript
 var consoler = require('consoler');
 consoler.add('alldone','green');
-````
+```
 
 ### Run unit-test (Mocha)
 
-````
+```
 $ git clone https://github.com/turingou/consoler.git
 $ cd consoler
 $ npm install 
 $ npm test
-````
+```

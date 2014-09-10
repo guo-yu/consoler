@@ -3,11 +3,11 @@ var should = require('should');
 
 describe('Console', function() {
   it('should return a correct string', function() {
-    consoler.log('success', 'hello world');
+    consoler('success', 'hello world');
     consoler.success('success');
   });
   it('should return a correct string', function() {
-    consoler.log('plain info');
+    consoler('plain info');
   });
 });
 
