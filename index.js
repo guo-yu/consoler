@@ -7,4 +7,4 @@
 // @breif: a smart console logger and debugger for your litter scripts.
 // @author: [新浪微博@郭宇](http://guoyu.me)
 
-module.exports = require('./libs/consoler');
+module.exports = require('./lib/consoler');

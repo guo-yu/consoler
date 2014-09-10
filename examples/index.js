@@ -1,4 +1,4 @@
-var consoler = require('../index');
+var consoler = require('../');
 
 consoler.log('success','consoler is a smart and colorful console logger');
 consoler.log('consoler will read your package.json automatically');
