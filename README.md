@@ -1,57 +1,38 @@
 ![logo](http://ww2.sinaimg.cn/large/61ff0de3gw1e85z78fu6lj200w00w741.jpg) consoler ![npm](https://badge.fury.io/js/consoler.png)
 ---
-another smart and colorful console logger
+a smart and colorful console logger
 
-![screenshot](http://ww1.sinaimg.cn/large/61ff0de3gw1e8bic1y1zfj20lv0dxmz2.jpg)
+![screenshot](./screenshot.png)
 
-### How to install
+### Installation
 
-````
+```bash
 $ npm install consoler
-````
+```
 
-### Sample code
+### Example
 
-```javascript
+```js
 var consoler = require('consoler');
 
-// check out in your console
-consoler.log('success','hey dude, well done !');
+consoler('success','hey dude, well done !');
+consoler('hey dude, well done !');
 
-// or use default tag
-consoler.log('hey dude, well done !');
-
-// or use shortcuts
+// shortcuts
 consoler.success('success!');
 consoler.error('fail!');
 consoler.loading('wait a moment!');
 ```
 
-### Run demos
+### Demo
 
 ```
 $ git clone https://github.com/turingou/consoler.git
-$ cd consoler/demo
-$ node demo.js
+$ cd consoler/example
+$ node index.js
 ```
 
-### Text align
-
-text align defalut length is 8, try to change edge length like this:
-```javascript
-consoler.align(20);
-```
-
-### Colors Map
-
-feel free to add your labels and colors in `./colors.json` or add your event and the color
-
-```javascript
-var consoler = require('consoler');
-consoler.add('alldone','green');
-```
-
-### Run unit-test (Mocha)
+### Tests (Mocha)
 
 ```
 $ git clone https://github.com/turingou/consoler.git
@@ -59,3 +40,28 @@ $ cd consoler
 $ npm install 
 $ npm test
 ```
+
+### MIT license
+Copyright (c) 2014 Hsiaoming Yang, Guo Yu &lt;o.u.turing@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+![docor](https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/doctor.png)
+built upon love by [docor](https://github.com/turingou/docor.git) v0.1.3

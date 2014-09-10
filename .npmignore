@@ -3,4 +3,5 @@ node_modules
 *.DS_*
 thumb
 psd
-demo
+examples
+*.png
